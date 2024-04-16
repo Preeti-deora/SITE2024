@@ -1,0 +1,1040 @@
+body{
+    margin: 0;
+
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* navigation bar css */
+input:focus{
+    outline: none;
+}
+
+select:focus{
+    outline: none;
+}
+
+#navArea>:nth-child(1){
+    border: 1px solid rgb(210, 209, 209);
+    border-bottom: 2px solid white;
+    color: rgb(158, 63, 26);
+}
+
+
+/* body */
+/*container*/
+#container{
+    width: 71%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 2.2%;
+    margin-bottom: 20%;
+    height: 2000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*child1*/
+
+#child1{
+    width: 27%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    padding: 0;
+
+}
+
+#child2{
+    width: 71%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    
+}
+
+
+/*child1 divs*/
+/*1.buttons*/
+/* 
+calendar */
+
+#calendar{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(201, 201, 201); 
+    
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#datevalue{
+    width: 100%;
+    height:10%;
+    /* border: 1px solid red; */
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px ;
+    box-sizing: border-box;
+    color: orangered;
+    font-weight: 700;
+}
+
+#date{
+    margin-bottom: 15%;
+}
+
+/* ad */
+
+#ad{
+    width: 100%;
+    height: 13%;
+    /* border: 1px solid rgb(201, 201, 201); */
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+/*energychart*/
+#enetitle{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+#energychart{
+    width: 100%;
+    height: 20%;
+    border: 1px solid rgb(201, 201, 201);
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+#energylines{
+    height: 70%;
+    width: 85%;
+    margin: auto;
+    /* border: 1px solid brown; */
+    box-sizing: border-box;
+
+}
+
+#energylines>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    /* border: 1px solid red; */
+}
+
+#energylines>div>span{
+    font-size: 12px;
+}
+
+.hr{
+    width: 80%;
+}
+
+.hr>hr{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+#energyinput{
+    width: 70%;
+    height: 17%;
+    /* border: 1px solid brown; */
+    margin: auto;
+    margin-top: 2%;
+    
+}
+
+#selectcategory{
+    width: 100%;
+    margin-top: 4%;
+    height: 40%;
+}
+
+#duration{
+    width: 100%;
+    margin-top: 4%;
+    height: 40%;
+}
+
+
+/*weightchart*/
+
+#weightchart{
+    width: 100%;
+    height: 18%;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#weightchange{
+    border-bottom: 1px solid gray;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 222, 222);
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#weightlines{
+    width: 85%;
+    height: 78%;
+    margin: auto;
+    /* border: 1px solid brown; */
+}
+
+#weightlines>div{
+    display: flex;
+    height: 18%;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#weightlines>div>span{
+font-size: 12px;
+}
+#weightselect{
+    display: flex;
+    width: 100%;
+    height: 12%;
+    /* border: 1px solid brown; */
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#weightselect>:nth-child(1){
+    width: 10%;
+    height: 100%;
+}
+#weightselect>:nth-child(2){
+    height: 60%;
+    width: 60%;
+}
+
+#weightselect>:nth-child(3){
+    height: 65%;
+    width: 10%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#weightselect>:nth-child(3):hover{
+background-color: rgb(235, 235, 235);
+}
+
+
+#weightselect>:nth-child(3)>img{
+width: 60%;
+height: 60%;
+}
+
+/*child2*/
+
+
+#add{
+ width: auto;
+ height: 5vh;
+ /* border: 1px solid brown;  */
+ display: flex;  
+ align-items: center;
+ justify-content: space-between;
+}
+
+#buttondiv{
+    display: flex;
+    width: 78%;
+    height: 100%;
+    align-items: center;
+    /* border: 1px solid yellow; */
+    box-sizing: border-box;
+}
+
+.addbutton{
+    height: 70%;
+    text-align: center;
+    border-radius: 14px;
+    border: none;
+    width: auto;
+    padding: 5px;
+    display: flex;
+    margin: 0px 1%;
+    padding: 4px 12px;
+    align-items: center;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.addbutton:hover{
+    background-color: rgb(243, 239, 239);
+}
+.addbtnimage{
+    height: 80%;
+    margin-right: 10px;
+}
+
+#threedots{
+    /* border: 1px solid red; */
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-radius: 90%;
+}
+#threedots:hover{
+    background-color: rgb(243, 239, 239);
+}
+#doticon{
+    width: 80%;
+    height: 60%;
+    
+}
+
+/*2. description*/
+
+#description{
+    width: auto;
+    height: 38vh;
+    border: 1px solid rgb(223, 223, 223);
+    margin-top: 1%;
+    border-radius: 5px;
+}
+#destable{
+    width: 100%;
+    border-collapse: collapse;
+}
+#destable thead{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(237, 237, 237);
+    
+
+}
+
+#destable tbody>:nth-child(odd) {background: rgb(240, 240, 240)}
+#1sttd{
+    width: 5%;
+}
+
+#destable td{
+/* border: 1px solid red; */
+width: 21%;
+text-align: center;
+box-sizing: border-box;
+
+}
+
+/*energy summary*/
+
+#energydiv{
+    width: 100%;
+    height: 23vh;
+    border: 1px solid rgb(169, 169, 169);
+    margin-top: 1%;
+    border-radius: 5px;
+    display: flex;
+
+}
+/* energysum */
+#energysum{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid rgb(169, 169, 169) ;
+    padding: 0px 10px 0px 10px;
+}
+
+#energysumtitle{
+    display: flex;
+    /* border: 1px solid red; */
+    height: 13%;
+    margin-top: 2%;
+}
+
+
+#energysumcharts{
+/* border: 1px solid red; */
+height: 78%;
+margin-top: 2%;
+display: flex;
+}
+
+
+#energysumcharts>div{
+    width: 33.33%;
+    /* border: 1px solid blue; */
+   height: 100%;
+    }
+
+.circleouter{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.consumed{
+    text-align: center;
+}
+
+.consumed>:nth-child(2){
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#consumed{
+    width: 60%;
+    height: 60%;
+    border: 15px solid rgb(194, 194, 194);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#consumed>:nth-child(1){
+    font-size: 20px;
+    font-weight: 700;
+}
+#consumed>:nth-child(2){
+    font-size: 15px;
+    color: rgb(171, 171, 171);
+    font-weight: 700;
+}
+
+#burned{
+width: 60%;
+height: 60%;
+border: 15px solid rgb(199, 75, 168);
+border-radius: 50%;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+
+}
+
+#burned>:nth-child(1){
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#burned>:nth-child(2){
+    font-size: 15px;
+    color: rgb(171, 171, 171);
+    font-weight: 700;
+}
+
+
+#budget{
+    width: 70%;
+    height: 70%;
+    /* border: 1px solid rgb(146,121,187); */
+    border-radius: 5px;
+    display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+overflow: hidden;
+}
+
+#budget>:nth-child(1){
+    height: 60%;
+    width: 100%;
+    background-color: rgb(146,121,187);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#budget>:nth-child(2){
+    height: 41%;
+    font-size: 13px;
+    background-color: rgb(114, 90, 151);
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* macro */
+#macro{
+    width: 50%;
+    height: auto;
+    padding: 10px;
+}
+
+#mtargets{
+    display: flex;
+    /* border: 1px solid blue; */
+    height: 15%;
+    justify-content: space-between;
+}
+
+#mtargets>div{
+    border: none;
+}
+
+.ibtn{
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    margin-left: 10px;
+}
+
+#mtargets>:nth-child(2):hover{
+    background-color: rgb(232, 232, 232);
+}
+.macroimg{
+    width: 70%;
+    height: 80%;
+}
+
+.macrodivs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    height: 13%;
+    font-weight: 700;
+}
+
+.macrodivs>:nth-child(2){
+    background-color: rgb(218, 218, 218);
+    width: 75%;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+/* nutrients */
+#nutrients{
+    height: auto;
+    width: 100%;
+    height: 1450px;
+    border: 1px solid rgb(169, 169, 169);
+    margin-top: 1%;
+    border-radius: 5px;
+}
+
+#target{
+    width:95%;
+    height: 1%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#suggest{
+    width: 24%;
+    height:200%;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+#food{
+   height: 100%;
+   border: 1px solid rgb(169, 169, 169);
+   width: 70%;
+   display: flex;
+   align-items: center;
+}
+
+#food>button{
+    height: 100%;
+    width: 30%;
+    border: none;
+    border-right: 1px solid rgb(169, 169, 169);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#food>button>img{
+    width: 80%;
+    height: 80%;
+}
+
+#food>span{
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+#i{
+    height: 100%;
+    /* border: 1px solid red; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* nutriton score */
+
+#nutscore{
+    width: 95%;
+    height: 10%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 4%;
+}
+
+#score{
+    display: flex;
+    width: 100%;
+    height: 13%;
+    /* border: 1px solid blue; */
+    
+}
+#score>span{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#score>div{
+    margin-left: 10px;
+}
+
+
+/*targetimg*/
+
+/*circle*/
+
+.circlediv{
+/* border: 1px solid red; */
+height: 90%;
+width: 14%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.circle{
+    border: 5px solid rgb(229, 229, 229);
+    width: 65%;
+    height: 70%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.circle>:nth-child(1){
+    font-size: 17px;
+    font-weight: 600;
+}
+.circle>:nth-child(2){
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+#targetimg{
+    width: 100%;
+    height: 65%;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#targetimg>img{
+    height: 95%;
+    width: 80%;
+}
+
+
+/*highlightednutrients*/
+
+#highlight{
+    width: 95%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    margin-top: 5%;
+   height: 7%;
+}
+
+#highnutrients{
+ /* border: 1px solid brown; */
+ font-size: 14px;
+}
+
+#nutrientrow{
+    /* border: 1px solid brown; */
+    height: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+
+/* tables */
+#elementtable{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid green; */
+    height: 1000px;
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+#elementtable table{
+ margin-bottom: 7%;
+ /* border: 1px solid rgb(172, 172, 172); */
+ width: 100%;
+ padding: 0px;
+ border-collapse: collapse;
+ border-radius: 5px;
+ overflow: hidden;
+ box-shadow: rgba(104, 104, 104, 0.24) 0px 3px 8px;
+ 
+}
+
+tr:nth-child(odd) {background: rgb(240, 240, 240)}
+
+tr{
+    text-align: center;
+    font-size: 12px;
+    height: 28px;
+}
+
+
+tr>:nth-child(1){
+    width: 40%;
+    /* border: 1px solid red; */
+    text-align: center;
+    padding-left: 10px;
+    color: rgb(201, 201, 201);
+}
+
+tr>:nth-child(2){
+    /* border: 1px solid red; */
+    width: 35%;
+    color: rgb(201, 201, 201);
+
+}
+
+tr>:nth-child(3){
+    /* border: 1px solid red; */
+    width: 20%;
+    text-align: center;
+}
+
+.third{
+  border: 1px solid rgb(201, 201, 201);
+  width: 70px;
+  text-align: center;
+  background-color: #fff;
+  font-size: 13px;
+  color: rgb(201, 201, 201);
+}
+
+/*t1*/
+
+
+#t1{
+    width: 49%;
+height: auto;
+/* border: 1px solid goldenrod; */
+}
+
+#general{
+    width: 100%;
+
+   /* border: 1px solid blueviolet; */
+   box-sizing: border-box;
+   
+}
+/*t2*/
+
+
+
+#t2{
+    width: 49%;
+height: auto;
+/* border: 1px solid goldenrod; */
+}
+
+#vitamins{
+    width: 100%;
+    
+}
+
+
+
+/* add product popus */
+
+#addfood{
+    position: fixed;
+    width: 56%;
+    height: auto;
+    top: 2%;
+    left: 22%;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background-color: #fff;
+    overflow: hidden;
+    visibility: hidden;
+    
+}
+
+#addfoodtitle{
+    width: 100%;
+    height: 13%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#addfoodtitle>h2{
+font-size: 18px;
+}
+
+#addfoodtitle>span{
+    /* border: 1px solid red; */
+    width: 3%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addfoodtitle>span:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#addfoodtitle>span>img{
+    width: 55%;
+    opacity: .5;
+    height: 62%;
+    
+}
+
+#search{
+    width: 100%;
+    height: 9%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+#search>:nth-child(1){
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+#search>:nth-child(1)>input{
+    width: 90%;
+   
+}
+
+#search>:nth-child(2){
+    width: 20%;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#search>:nth-child(2)>button{
+    width: 60%;
+    height: 80%;
+    border: 1px solid orangered;
+    color: orangered;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#settingimg{
+width: 15%;
+/* border: 1px solid red; */
+height: 70%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#settingimg>img{
+    width: 70%;
+    height: 70%;
+}
+
+#heads{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px 0px 20px;
+    box-sizing: border-box;
+    background-color: rgb(244, 244, 244);
+}
+
+#headtitles{
+    width: 70%;
+    height: 100%;
+    border: none;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+#headtitles>div{
+    width: auto;
+    /* border: 1px solid rgb(201, 201, 201); */
+    border-radius: 2px;
+    border-bottom: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 0px 10px;
+    
+}
+
+
+#heads>:nth-child(2){
+    width: 3%;
+    height: 60%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popupi{
+    width: 60%;
+    opacity: .5;
+}
+
+#itemslist{
+   width: 96%;
+   height: 210px;
+   /* border: 1px solid red; */
+   margin: auto; 
+   margin-top: 5px;
+   overflow: scroll;
+   overflow-x: hidden;
+   margin-bottom: 11%;
+}
+
+#itemstable{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+
+
+#itemslist>table>thead>:nth-child(1){
+    width: 70%;
+}
+
+
+/* tdimage */
+
+.tdimage{
+    width: 15%;
+    margin-left: 5px;
+}
+
+#addtodesbtn{
+    width: 17%;
+    /* border: 1px solid red; */
+    height: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(255,118,63);
+    font-size: 18px;
+    display: none;
+}
+
+.removebtn:hover{
+    cursor: pointer;
+    color: red;
+    transform: scale(2);
+    
+}
