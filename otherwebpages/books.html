@@ -5,10 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Self-Help Books</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   
+    .gradient-background {
+        background: linear-gradient(320deg, hwb(172 0% 2%), #2bbbe3, hsl(293, 73%, 64%));
+        background-size: 180% 180%;
+        animation: gradient-animation 5s ease infinite;
+      }
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
 </head>
 <body>
 
-<div class="container mt-5">
+<div class="container mt-5 gradient-background">
   <h1 class="text-center mb-4">Self-Help Books</h1>
   
   <div class="row">

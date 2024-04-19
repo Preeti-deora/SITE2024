@@ -1,36 +1,101 @@
-// Set up the canvas
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
+$(document).ready(function () {
+    var turns = ["#", "#", "#", "#", "#", "#", "+", "#"];
+    var computerTurn = "";
+    var turn = "";
+    var gameOn = false;
+    var count = 0;
 
-// Set up the game variables
-const WIDTH = 800;
-const HEIGHT = 600;
-const gridSize = 50;
-
-// Function to draw the grid
-function drawGrid() {
-    ctx.fillStyle = '#fff'; // Background color
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-    ctx.strokeStyle = '#000'; // Grid line color
-    for (let x = 0; x <= WIDTH; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, HEIGHT);
-        ctx.stroke();
+    function startGame() {
+        var startTurn = prompt("Choose Your Move", "Type X or O").toUpperCase();
+        switch (startTurn) {
+            case "X":
+                computerTurn = "O";
+                turn = "X";
+                $("#message").html("Player " + turn + " gets to start!");
+                break;
+            case "O":
+                computerTurn = "X";
+                turn = "O";
+                $("#message").html("Player " + turn + " gets to start!");
+                break;
+            case null:
+                alert("Sorry. Please type X or O");
+                window.location.reload(true);
+                break;
+            default:
+                alert("Sorry. Please type X or O");
+                window.location.reload(true);
+                break;
+        }
     }
-    for (let y = 0; y <= HEIGHT; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(WIDTH, y);
-        ctx.stroke();
+
+    function computersTurn() {
+        var taken = false;
+        while (taken === false && count !== 5) {
+            var computerMove = (Math.random() * 10).toFixed();
+            var move = $("#" + computerMove).text();
+            if (move === "#") {
+                $("#" + computerMove).text(computerTurn);
+                taken = true;
+                turns[computerMove] = computerTurn;
+            }
+        }
     }
-}
 
-// Main function
-function main() {
-    drawGrid();
-}
+    function playerTurn(turn, id) {
+        var spotTaken = $("#" + id).text();
+        if (spotTaken === "#") {
+            count++;
+            turns[id] = turn;
+            $("#" + id).text(turn);
+            winCondition(turns, turn);
+            if (gameOn === false) {
+                computersTurn();
+                $("#message").html("It's " + turn + "'s turn.");
+                winCondition(turns, computerTurn);
+            }
+        }
+    }
 
-// Call the main function
-main();
+    function winCondition(trackMoves, currentMove) {
+        if ((trackMoves[0] === currentMove && trackMoves[1] === currentMove && trackMoves[2] === currentMove) ||
+            (trackMoves[2] === currentMove && trackMoves[4] === currentMove && trackMoves[6] === currentMove) ||
+            (trackMoves[0] === currentMove && trackMoves[3] === currentMove && trackMoves[6] === currentMove) ||
+            (trackMoves[0] === currentMove && trackMoves[4] === currentMove && trackMoves[8] === currentMove) ||
+            (trackMoves[1] === currentMove && trackMoves[4] === currentMove && trackMoves[7] === currentMove) ||
+            (trackMoves[2] === currentMove && trackMoves[5] === currentMove && trackMoves[8] === currentMove) ||
+            (trackMoves[2] === currentMove && trackMoves[5] === currentMove && trackMoves[8] === currentMove) ||
+            (trackMoves[3] === currentMove && trackMoves[4] === currentMove && trackMoves[5] === currentMove) ||
+            (trackMoves[6] === currentMove && trackMoves[7] === currentMove && trackMoves[8] === currentMove)) {
+            gameOn = true;
+            reset();
+            alert("Player " + currentMove + " wins!");
+        } else if (!(trackMoves.includes("#"))) {
+            gameOn = true;
+            reset();
+            alert("It is a Draw!");
+        } else {
+            gameOn = false;
+        }
+    }
+
+    $(".tic").click(function () {
+        var slot = $(this).attr('id');
+        playerTurn(turn, slot);
+    });
+
+    function reset() {
+        turns = ["#", "#", "#", "#", "#", "#", "+", "#"];
+        count = 0;
+        $(".tic").text("#");
+        gameOn = true;
+    }
+
+    $("#reset").click(function () {
+        startGame(); // Ask for X or O when reset button is clicked
+    });
+
+    $("#start").click(function () {
+        startGame(); // Ask for X or O when start button is clicked
+    });
+});
